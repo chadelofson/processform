@@ -13,7 +13,7 @@
       values: params.values()
     }
     
-    demoEl.textContent = JSON.stringify(params.entries())
+    demoEl.textContent = JSON.stringify(params.toString())
     window.parent.postMessage(msg)
   }
 
