@@ -3,21 +3,20 @@
 <head>
 
 <script type="text/javascript">
-  const demoEl = document.getElementById("demo")
 
   function init() {
     const msg = {
       msg: "Look what we got back from Sales Force!",
     }
-    
+    console.log("Processed")
     window.parent.postMessage(msg)
   }
-
+  init()
 </script>
 
 </head>
 
-<body onload="init();" style="background-color:lightgray;">
+<body style="background-color:lightgray;">
   <h1>Process Salesforce Form Submissions to Wix</h1>
   <p id="demo">Submission is complete</p>
 </body>
