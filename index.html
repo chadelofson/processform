@@ -8,7 +8,7 @@
     let params = (new URL(document.location)).searchParams
     const msg = {
       msg: "Look what we got back from Sales Force!",
-      keys: params.keys()
+      keys: params.keys(),
       values: params.values()
     }
     window.parent.postMessage(msg)
