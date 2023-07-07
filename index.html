@@ -3,7 +3,8 @@
 <head>
 
 <script type="text/javascript">
-  
+  const demoEl = document.getElementById("demo")
+
   function init() {
     let params = (new URL(document.location)).searchParams
     const msg = {
@@ -11,6 +12,8 @@
       keys: params.keys(),
       values: params.values()
     }
+    
+    demoEl.textContext = JSON.stringify(params.entries())
     window.parent.postMessage(msg)
   }
 
