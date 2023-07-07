@@ -6,14 +6,10 @@
   const demoEl = document.getElementById("demo")
 
   function init() {
-    let params = (new URL(document.location)).searchParams
     const msg = {
       msg: "Look what we got back from Sales Force!",
-      keys: params.keys(),
-      values: params.values()
     }
     
-    demoEl.textContent = JSON.stringify(params.toString())
     window.parent.postMessage(msg)
   }
 
@@ -23,6 +19,6 @@
 
 <body onload="init();" style="background-color:lightgray;">
   <h1>Process Salesforce Form Submissions to Wix</h1>
-  <p id="demo">This page is for submitting and communicating with Wix</p>
+  <p id="demo">Submission is complete</p>
 </body>
 </html>
